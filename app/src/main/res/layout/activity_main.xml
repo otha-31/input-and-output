@@ -12,8 +12,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="cursive"
-        android:text="Hello"
-        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,5 +34,13 @@
         android:text="Click Me"
         tools:layout_editor_absoluteX="160dp"
         tools:layout_editor_absoluteY="632dp" />
+
+    <Switch
+        android:id="@+id/zuluSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zulu"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="349dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

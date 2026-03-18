@@ -3,6 +3,7 @@ package com.example.inputoutputactivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -20,9 +21,29 @@ class MainActivity : AppCompatActivity() {
         val clickMeButton = findViewById<Button>(R.id.clickbutton)
         val welcomeTxt =findViewById<TextView>(R.id.displayTxt)
         val nameTxtField = findViewById<EditText>(R.id.nameTxt)
+        //get the switch that turns on the zulu greeting
+        val zuluSwitch = findViewById<Switch>(R.id.zuluSwitch)
 
-        //add code to the button that happens when code is clicked
-        clickMeButton?.setOnClickListener{
+        //add the code to the button that happens when clicked
+        clickMeButton.setOnClickListener {
+             welcomeTxt.text ="welcome. ${nameTxtField}.text!"}
+
+        //add the code to the button
+        clickMeButton?.setOnClickListener {
+            var greeting: String
+            if (zuluSwitch.isChecked) {
+                greeting = "sawubona, ${nameTxtField.text}!"
+            } else {
+                //easter egg for Otha
+                if (nameTxtField.text.toString() == "Otha" ||
+                     nameTxtField.text.toString() == "Otha") {
+                    greeting = "Yo.${nameTxtField.text}!"
+                } else {
+                    greeting = "greetings, ${nameTxtField.text}!"
+                }
+            }
+            welcomeTxt.text =greeting
+
             //
 
             Toast.makeText(this@MainActivity,
