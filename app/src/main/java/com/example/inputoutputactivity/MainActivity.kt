@@ -31,12 +31,15 @@ class MainActivity : AppCompatActivity() {
         //add the code to the button
         clickMeButton?.setOnClickListener {
             var greeting: String
+            var zulu: Boolean
+            var age: 18
             if (zuluSwitch.isChecked) {
                 greeting = "sawubona, ${nameTxtField.text}!"
             } else {
                 //easter egg for Otha
-                if (nameTxtField.text.toString() == "Otha" ||
-                     nameTxtField.text.toString() == "Otha") {
+                if ((nameTxtField.text.toString() == "Otha" ||
+                     nameTxtField.text.toString() == "Otha")
+                      && age > 18) {
                     greeting = "Yo.${nameTxtField.text}!"
                 } else {
                     greeting = "greetings, ${nameTxtField.text}!"
